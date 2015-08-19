@@ -109,8 +109,11 @@
                 .when('/', {templateUrl: 'views/home.html'})
                 .when('/alunos', {templateUrl: 'views/alunos.html'})
                 .when('/professores', {templateUrl: 'views/professores.html'})
-                .when('/professores/1', {templateUrl: 'views/oficina-1.html'})
-                .when('/professores/2', {templateUrl: 'views/oficina-2.html'})
+                .when('/professores/:pageID',{
+                  templateUrl: function(params){
+                    return 'views/oficina-' + params.pageID + '.html'
+                  }
+                })
                 .when('/alunos/1', {templateUrl: 'views/oficina-3.html'})
                 .when('/alunos/2', {templateUrl: 'views/oficina-4.html'})
                 .when('/alunos/3', {templateUrl: 'views/oficina-5.html'})
