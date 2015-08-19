@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="FractalApp">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Fractal - Elvira Brandão</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css">
+    <!--   <link rel="stylesheet" href="https://rawgit.com/angular/bower-material/master/angular-material.css"> -->
+
+    <link rel="stylesheet" href="public/css/application.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width">
+
+</head>
+
+<body>
+
+<header ng-controller="MenuCtrl">
+    <!-- Menu -->
+    <md-toolbar class="header" md-scroll-shrink layout-align="center center">
+        <div class="md-toolbar-tools">
+
+            <md-button aria-label="Menu" hide-gt-md ng-click="toggleMenu()">
+                <i class="fa fa-bars"></i>
+            </md-button>
+
+            <a href="#/"><img src="public/images/fractal-logo.png"/></a>
+
+            <!-- Navigation  -->
+            <ul id="nav" layout="row" show-gt-md hide flex layout-align="left center">
+
+                <li flex="25"><a href="#/professores">CURSOS PARA <br/> PROFESSORES</a></li>
+                <li flex="25"><a href="#/alunos">CURSOS PARA <br/> ALUNOS</a></li>
+                <li flex="25"><a href="#/contato">CONTATO</a></li>
+            </ul>
+
+            <a href="http://www.elvirabrandao.com.br/colegio/" target="_blank" hide-sm><img src="public/images/elvira-logo.png"/></a>
+
+            <span flex hide-gt-md></span>
+
+            <!-- /Navigation  -->
+
+        </div>
+    </md-toolbar>
+    <!-- /Menu -->
+</header>
+<!-- Body Page  -->
+
+<!-- Mobile Menu  -->
+<md-sidenav layout="column" class="md-whiteframe-z3" md-component-id="menu-mobile" id="menu-mobile">
+
+    <md-toolbar>
+        <span flex></span>
+
+        <div layout="row">
+            <img src="public/images/fractal-logo.png"/>
+        </div>
+    </md-toolbar>
+
+    <md-list ng-init="subMenu = false" ng-controller="MenuCtrlMobile">
+
+        <md-divider></md-divider>
+
+        <md-item>
+            <md-item-content md-ink-ripple layout-align="start center">
+                <div class="inset" ng-click="closeMenu()"><a href="#/alunos">ALUNOS</a></div>
+            </md-item-content>
+        </md-item>
+
+        <md-divider></md-divider>
+
+        <md-item>
+            <md-item-content md-ink-ripple layout-align="start center">
+                <div class="inset" ng-click="closeMenu()"><a href="#/professores">PROFESSORES</a></div>
+            </md-item-content>
+        </md-item>
+
+        <md-divider></md-divider>
+
+        <md-item>
+            <md-item-content md-ink-ripple layout-align="start center">
+                <div class="inset" ng-click="closeMenu()"><a href="#/contato">CONTATO</a></div>
+            </md-item-content>
+        </md-item>
+
+        <md-divider></md-divider>
+
+    </md-list>
+
+</md-sidenav>
+<!-- /Mobile Menu  -->
+<!-- Views -->
+<section layout="column" ng-view="">
+
+</section>
+
+<!-- /Views  -->
+
+<!-- /Body Page  -->
+
+<!-- Angular Material Dependencies -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.0/angular-sanitize.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.0/angular-material.min.js"></script>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="public/scripts/vendor/ui.bootstrap.carousel.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz1feV2-zNtoFLGWZshtnT3cgntnM8D5w&sensor=true"></script>
+<script src="public/scripts/vendor/maps.js"></script>
+
+<script src="public/scripts/application.min.js"></script>
+</body>
+</html>

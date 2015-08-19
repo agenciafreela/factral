@@ -1,0 +1,19 @@
+<div class="widget" layout="row" layout-wrap layout-align="center center" ng-class="widgetCtrl.showMore ? 'active' : ''" ng-repate="widget in widgetCtrl.widgets">
+
+  <div class="title" flex="100" flex-lg="50" flex-gt-lg="60">
+    <h1>{{widget.title}} </span><i ng-class="widgetCtrl.showMore ? 'fa fa-minus-square' : 'fa fa-plus-square' " ng-click="widgetCtrl.toggleContent();"></i></i></h1>
+
+    <section>
+      {{widget.content}}
+
+      <span ng-show="widgetCtrl.showMore">
+        {{widget.contentHidden}}
+      </span>
+    </section>
+
+  </div>
+<!-- ?showinfo= -->
+  <div class="video-container" flex="100" flex-lg="50" flex-gt-md="40">
+    <iframe src="{{widget.video}}0" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>

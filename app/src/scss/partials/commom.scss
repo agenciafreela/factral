@@ -1,0 +1,165 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: $grey;
+
+  h1, a {
+    text-decoration: none;
+    font-weight: lighter;
+  }
+  p {
+    line-height: 1.3;
+  }
+}
+
+#content {
+  background: $grey;
+}
+
+.bg-yellow {
+  background-color: $yellow;
+}
+
+.bg-green {
+  background-color: $green;
+}
+
+.bg-orange {
+  background-color: $orange;
+}
+
+.bg-blue {
+  background-color: $blue;
+}
+
+.bg-pink {
+  background-color: $pink;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.md-toolbar-tools {
+  background-color: $grey;
+  height: 78px;
+  max-height: 78px;
+}
+
+#slides_control > div {
+  img {
+    margin: auto;
+    width: 100%;
+  }
+}
+
+.carousel-control > i {
+  font-size: 2vw;
+  opacity: 0.6;
+}
+
+md-progress-circular {
+  -webkit-transform: scale(2);
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  top: 50%;
+}
+
+md-toolbar.md-default-theme {
+  background-color: $grey;
+  color: $grey !important;
+  padding: auto 30px;
+}
+
+md-item-content {
+  a {
+    &:link, &:hover, &:visited {
+      color: $blue;
+    }
+  }
+}
+
+.header {
+  background-color: white;
+  color: $blue !important;
+  padding: auto 30px;
+
+  .fa-bars {
+    font-size: 2em;
+    color: $white;
+    //background-color: $blue;
+    margin-right: 30px;
+  }
+
+  .fa-facebook-official {
+    background-color: $white;
+    color: $blue;
+    font-size: 3em !important;
+  }
+
+  a img {
+    margin: 0 10px;
+    max-width: 100%;
+    display: block;
+  }
+
+  #nav {
+    padding: 0;
+
+    li {
+      list-style-type: none;
+      text-align: center;
+      font-size: 18px;
+      height: 78px;
+      padding: 15px 0;
+      &:first-child {
+        background-color: $green;
+      }
+      &:nth-child(2) {
+        background-color: $red;
+      }
+      &:nth-child(3) {
+        background-color: $lightblue;
+        padding: 25px 0;
+      }
+      position: relative;
+      a {
+        font-weight: bold;
+      }
+      &:hover {
+        ul {
+          display: block;
+        }
+      }
+
+      & > ul {
+        background-color: $blue;
+        color: $white;
+        display: none;
+        padding: 10px;
+        position: absolute;
+        top: 40px;
+        width: 80px;
+        z-index: 9999;
+        left: 50%;
+        margin-left: -35px;
+
+        li {
+          text-align: center;
+        }
+
+        &:before {
+          content: '';
+          background: url('../images/icons/ico-triangle.png') no-repeat center;
+          width: 70px;
+          height: 40px;
+          margin: -38px 0 0 -10px;
+          float: left;
+        }
+      }
+    }
+  }
+}

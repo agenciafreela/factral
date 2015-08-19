@@ -1,0 +1,48 @@
+<div id="home">
+
+    <div hide-sm>
+        <div ng-controller="CarouselHomeCtrl as carousel" id="slides_control">
+            <div>
+                <carousel interval="myInterval">
+                    <slide ng-repeat="banner in carousel.banners" active="slide.active">
+                        <a ng-href="{{banner.link}}" target="_blank">
+                            <img ng-src="./public/images/banner/{{banner.image}}" img-responsive>
+                        </a>
+
+                        <div class="carousel-caption">
+                            <h4>{{slide.title}}</h4>
+                        </div>
+                    </slide>
+                </carousel>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget" layout="row" layout-wrap layout-align="center center">
+
+        <div id="fractal" class="title" flex="100" flex-gt-lg="50"
+             style="background: url('./public/images/fractal-bg.png') top left no-repeat;">
+
+            <section>
+                <p>
+                    Fractal: partes iguais formam o todo que se repete infinitamente.
+                </p>
+
+                <p>
+                    Essa é nossa rede, pessoas dispostas a aprender e a ensinar são as partes que compõem um
+                    conhecimento crescente e infinito, o todo.
+                </p>
+
+                <p>
+                    <b>Seja parte do nosso Fractal!</b>
+                </p>
+            </section>
+
+        </div>
+
+        <div class="img-container" flex="100" flex-gt-lg="50">
+            <img src="public/images/fractal-big.png" alt="Fractal - A rede colaborativa do Elvira"/>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,183 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+
+@import 'partials/variables.scss';
+//@import 'partials/fonts.scss';
+@import 'partials/commom.scss';
+@import 'partials/_mixins.scss';
+@import 'partials/media-query.scss';
+@import 'vendor/bootstrap/_carousel.scss';
+
+
+@import 'home.scss';
+@import 'contato.scss';
+
+html, body, md-content.md-default-theme{
+  background-color: $grey;
+  color: $darkgrey;
+  font-family: 'Lato', sans-serif !important;
+}
+
+#oficinas{
+
+  .title-red {
+    h2, h3 {
+      background-color: $red;
+    }
+    .month {
+      color: $red;
+    }
+  }
+
+  .title-green {
+    h2, h3 {
+      background-color: $green;
+    }
+    .month {
+      color: $green;
+    }
+  }
+
+  .title-orange {
+    h2, h3 {
+      background-color: $orange;
+    }
+    .month {
+      color: $orange;
+    }
+  }
+
+  .title-blue {
+    h2, h3 {
+      background-color: $lightblue;
+    }
+    .month {
+      color: $lightblue;
+    }
+  }
+
+  .button-subscribe a {
+    text-align: center;
+    display: block;
+    padding: 20px;
+    color: $white;
+    font-size: 20px;
+  }
+
+  .button-red {
+    background-color: $red;
+  }
+
+  .button-green {
+    background-color: $green;
+  }
+
+  .button-orange {
+    background-color: $orange;
+  }
+
+  .button-blue {
+    background-color: $lightblue;
+  }
+
+  .title{
+    height: 100px;
+  }
+  article{
+    background-color: $white;
+    &>div {
+      position: relative;
+      overflow: hidden;
+    }
+    .month {
+      background-color: $white;
+      text-transform: uppercase;
+      font-weight: 900;
+      transform: rotate(-55deg);
+      -webkit-transform: rotate(-55deg);
+      height: 30px;
+      width: 160px;
+      position: absolute;
+      margin: 30px 0 0 -30px;
+      padding: 5px 40px;
+      z-index: 2;
+    }
+    h3 {
+      padding-top: 15px;
+      padding-left: 90px;
+      padding-right: 10px;
+      margin: 0;
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 18px;
+      text-align: center;
+      height: 90px;
+      a{
+        color: $white;
+      }
+    }
+    p{
+      padding: 10px;
+      margin: 0;
+    }
+    img{
+      max-width: 100%;
+      margin: 0 auto;
+      display: block;
+    }
+    .valores{
+      //background: $blue;
+      //color: $white;
+      text-align: center;
+      font-style: italic;
+      padding: 0 0 20px;
+    }
+  }
+  figure {
+    margin: 0;
+    position: relative;
+  }
+  figure:hover figcaption, figcaption {
+    opacity: 0.7;
+    //background: $yellow;
+  }
+  figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    text-align: center;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    a{
+      position: relative;
+      top: 40%;
+      margin-top: -35px;
+      font-weight: 900;
+      border: solid 3px $white;
+      color: $white;
+      padding: 5px;
+      text-transform: uppercase;
+    }
+  }
+
+  .post {
+    h2 {
+      margin: 0;
+      padding: 15px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $white;
+    }
+    .oficina-content {
+      padding: 20px;
+    }
+  }
+}
+
+.fb_iframe_widget_fluid span, .fb_iframe_widget iframe {
+  width: 100% !important;
+}

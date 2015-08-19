@@ -1,0 +1,122 @@
+
+
+.carousel-indicators {
+  li, .active {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #fff;
+    background-color: $darkred;
+    margin: 0 5px;
+  }
+  .active {
+    background-color: $lightblue;
+  }
+}
+
+#home {
+  background-color: $lightgrey;
+}
+
+.widget{
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  &.active{
+    height: 100% !important;
+    min-height: 850px;
+  }
+
+  &.curso{
+    section{
+      padding: 16px 10px;
+      font-size:12px;
+      background-color: rgba(0,0,0,.6);
+      margin-bottom: 20px;
+      max-height: 570px;
+      overflow: scroll;
+    }
+    #slides_control {
+      width: 80%;
+      margin: 0 0 0 10%;
+      @media(min-width: 1500px){
+        width: 70%;
+        margin: 0 0 0 15%;
+      }
+    }
+    .video-container iframe{
+      width: 70%;
+      height: 90%;
+    }
+  }
+
+  div{
+    //color: $white;
+    z-index:2;
+
+    .content{
+      padding: 0 40px;
+    }
+
+    &.title{
+      padding: 0 0 0 25px;
+
+      h1{
+        font-size: 80pt;
+        font-weight: 100;
+      }
+      .plus{
+        text-align: left;
+        padding-left:20px;
+        font-size: 40pt;
+        max-width: 560px;
+      }
+    }
+
+  }
+
+  #fractal{
+    //color: $grey;
+    height: 100%;
+    @media (max-width: 1200px){
+      //height: 500px;
+    }
+    &.title{
+      //padding: 0 0 0 5%;
+      h1{
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
+    section{
+      padding: 200px 50px 0 350px;
+      font-size: 18px;
+      @media (max-width: 600px) {
+        padding: 200px 10px 0 10px;
+      }
+    }
+  }
+
+  .img-container {
+    background-color: $lightgrey;
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto 20px;
+    }
+  }
+}
+
+//footer{
+//  text-align: center;
+//  padding-bottom: 20px;
+//  h4{
+//    font-weight: lighter;
+//  }
+//  img {
+//    padding: 10px 20px;
+//    max-width: 140px;
+//  }
+//}

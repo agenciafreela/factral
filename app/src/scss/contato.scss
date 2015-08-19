@@ -1,0 +1,154 @@
+#info-contato {
+  background-color: $lightblue;
+  z-index: 4;
+  color: $white;
+  text-align: center;
+  border-radius: 5px;
+  p {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    b {
+      font-size: 21px;
+      font-weight: 900;
+    }
+  }
+}
+
+
+/*contato*/
+#contato, #map_canvas{
+  width:100%; height:auto; min-height:100%;
+  position: absolute;
+
+}
+.md-caption {
+  margin-top: -7px;
+  color: #777;
+}
+
+
+#contato{
+  #map_canvas{
+    z-index: 0;
+  }
+  #toolbox{
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    height: 500;
+
+    ul{
+      margin:0;
+      @media(max-width: 599px){
+        padding: 0;
+      }
+      &>li{
+        list-style: none;
+        display: inline-block;
+        position: relative;
+        text-align: center;
+
+        &.active{
+          &:before{
+            content: '';
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid $yellow;
+            position: absolute;
+            top: 194px;
+            margin-left: 50%;
+            left: -10px;
+          }
+        }
+      }
+    }
+    img{
+      margin: 0 10px;
+      cursor: pointer;
+      @media(max-width: 599px){
+        width: 100%;
+        margin: 0;
+      }
+      @media(min-width: 600px){
+        display: block;
+      }
+    }
+  }
+}
+
+#contato > #toolbox{
+
+  .box{
+    background: $yellow;
+    position: relative;
+    width: 510px;
+    margin: 6px 0 0 40px;
+    @media (max-width: 599px) {
+      width: inherit;
+      margin: 0;
+    }
+    form{
+      width: 100%;
+    }
+
+    .route_not_found{
+      span{
+        font-style: italic;
+        font-weight: bold;
+      }
+    }
+
+    md-content{
+
+      md-input-container, #address{
+        width:100%;
+      }
+
+      md-input-container{
+        padding-bottom: 2px;
+
+        button{
+          padding: 8px 20px;
+          background-color: $blue;
+          color: $white;
+          margin-top: 25px;
+          border: 0;
+        }
+      }
+
+      input, textarea, md-select{
+        background: $white;
+        color: $blue;
+        -webkit-transition: border 0.5s;
+        transition: border 0.5s;
+        padding-bottom: 2px;
+        padding-left: 2px;
+      }
+
+      md-select{
+        span{
+          position: absolute;
+          right: 0;
+        }
+      }
+
+    }
+
+    md-content{
+      .md-input-focused{
+        input{
+          border-bottom: 2px $blue solid;
+        }
+      }
+    }
+  }
+}
+#howToGet{
+  md-input-container:first-child{
+    padding-right: 0;
+  }
+  md-input-container:last-child{
+    padding-left: 0;
+  }
+}
