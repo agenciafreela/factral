@@ -107,16 +107,16 @@
             //$httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
             $routeProvider
                 .when('/', {templateUrl: 'views/home.html'})
-                .when('/alunos', {templateUrl: 'views/alunos.html'})
-                .when('/professores', {templateUrl: 'views/professores.html'})
-                .when('/professores/:pageID',{
+                .when('/cursos', {templateUrl: 'views/cursos.html'})
+                //.when('/professores', {templateUrl: 'views/professores.html'})
+                .when('/curso/:pageID',{
                   templateUrl: function(params){
                     return 'views/oficina-' + params.pageID + '.html'
                   }
                 })
-                .when('/alunos/1', {templateUrl: 'views/oficina-3.html'})
-                .when('/alunos/2', {templateUrl: 'views/oficina-4.html'})
-                .when('/alunos/3', {templateUrl: 'views/oficina-5.html'})
+                //.when('/alunos/1', {templateUrl: 'views/oficina-3.html'})
+                //.when('/alunos/2', {templateUrl: 'views/oficina-4.html'})
+                //.when('/alunos/3', {templateUrl: 'views/oficina-5.html'})
                 .when('/contato', {templateUrl: 'views/contato.html'})
                 .otherwise({
                     redirectTo: '/'
